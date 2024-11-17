@@ -22,11 +22,11 @@ pipeline {
                 }
             }
         }
-        // stage('Test Entregable 1') {
-        //     steps {
-        //             sh 'python3 Entregable1/tests.py'
-        //     }
-        // }
+        stage('Test Entregable 1') {
+            steps {
+                    sh 'python3 Entregable1/tests.py'
+            }
+        }
         stage('Test Entregable 3') {
             steps {
                     sh 'python3 Entregable3/test.py'
