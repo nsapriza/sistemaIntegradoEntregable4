@@ -12,13 +12,13 @@ def menu():
 
         if opcion == '1':
             print("\nEjecutando Trivia...")
-            subprocess.run(["python", "Entregable1\main.py"]) 
+            subprocess.run(["python", "./Entregable1/main.py"]) 
         elif opcion == '2':
             print("\nProcesando Pedidos...") 
-            subprocess.run(["java", "-jar", "TestApp.jar"])  
+            subprocess.run(["java", "-jar", "prog-app-1.0.jar"])  
         elif opcion == '3':
             print("\nRealizando Consultas en USQL...")
-            subprocess.run(["python", "Entregable3\API.py"])  
+            subprocess.run(["python", "./Entregable3/API.py"])  
         elif opcion == '4':
             print("Saliendo del sistema. ¡Hasta luego!")
             break
