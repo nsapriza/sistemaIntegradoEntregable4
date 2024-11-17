@@ -12,7 +12,7 @@ def imp_csv()->list:
             - csv acotado a cuatro columnas
             - [Category,Value,Question,Answer]
     """
-    with open('Entregable1/JEOPARDY_CSV.csv', newline='\n',encoding="latin-1") as csvfile:
+    with open('./Entregable1/JEOPARDY_CSV.csv', newline='\n',encoding="latin-1") as csvfile:
         spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
         j=0
         data = []
