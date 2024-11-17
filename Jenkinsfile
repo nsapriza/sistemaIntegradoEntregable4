@@ -35,7 +35,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 dir("Entregable2"){
-                    sh 'cp target/prog-app ../'
+                    sh 'cp target/prog-app-1.0 ../'
                     echo 'menu.py can now be run'
                 }
             }

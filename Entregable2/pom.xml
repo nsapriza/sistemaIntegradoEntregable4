@@ -5,6 +5,7 @@
 
   <groupId>edu.um.prog</groupId>
   <artifactId>prog-app</artifactId>
+  <version>1.0</version>
 
   <name>prog-app</name>
   <!-- FIXME change it to the project's website -->
