@@ -42,7 +42,7 @@ pipeline {
         }
         stage('Send ok email') {
             steps {
-                mail bcc: '', body: 'All is well with the latest pipline run', subject: 'Latest pipeline run', to: ${USER_EMAIL}
+                mail bcc: '', body: 'All is well with the latest pipline run', subject: 'Latest pipeline run', to: "${USER_EMAIL}"
             }
         }
     }
