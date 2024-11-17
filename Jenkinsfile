@@ -15,6 +15,13 @@ pipeline {
                 }
             }
         }
+        stage('Compile Entregable 2') {
+            steps {
+                dir("Entregable2"){
+                    sh 'mvn package'
+                }
+            }
+        }
         stage('Test Entregable 1') {
             steps {
                     sh 'python3 Entregable1/tests.py'
@@ -25,10 +32,13 @@ pipeline {
                     sh 'python3 Entregable3/test.py'
             }
         }
-        // stage('Deliver') {
-        //     steps {
-        //         sh './jenkins/scripts/deliver.sh'
-        //     }
-        // }
+        stage('Deliver') {
+            steps {
+                dir("Entregable2"){
+                    sh 'cp target/prog-app ../'
+                    echo 'menu.py can now be run'
+                }
+            }
+        }
     }
 }
