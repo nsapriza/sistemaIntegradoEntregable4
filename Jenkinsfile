@@ -40,5 +40,10 @@ pipeline {
                 }
             }
         }
+        stage('Send ok email') {
+            steps {
+                mail bcc: '', body: 'All is well with the latest pipline run', subject: 'Latest pipeline run', to: 'nsapriza1@correo.um.edu.uy'
+            }
+        }
     }
 }
