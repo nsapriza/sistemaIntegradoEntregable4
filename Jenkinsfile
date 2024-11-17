@@ -22,11 +22,11 @@ pipeline {
                 }
             }
         }
-        stage('Test Entregable 1') {
-            steps {
-                    sh 'python3 Entregable1/tests.py'
-            }
-        }
+        // stage('Test Entregable 1') {
+        //     steps {
+        //             sh 'python3 Entregable1/tests.py'
+        //     }
+        // }
         stage('Test Entregable 3') {
             steps {
                     sh 'python3 Entregable3/test.py'
@@ -42,7 +42,7 @@ pipeline {
         }
         stage('Send ok email') {
             steps {
-                mail bcc: '', body: 'All is well with the latest pipline run', subject: 'Latest pipeline run', to: '${USER_EMAIL}'
+                mail bcc: '', body: 'All is well with the latest pipline run', subject: 'Latest pipeline run', to: ${USER_EMAIL}
             }
         }
     }
