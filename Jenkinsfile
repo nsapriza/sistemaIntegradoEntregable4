@@ -1,17 +1,31 @@
 pipeline {
     agent any
     stages {
-        stage('Build') { 
+        stage('Build Entregable 2') { 
             steps {
                 dir("Entregable2"){
                     sh 'mvn -B -DskipTests clean package'
                 } 
             }
         }
-        stage('Test') {
+        stage('Test Entregable 2') {
             steps {
                 dir("Entregable2"){
                     sh 'mvn test'
+                }
+            }
+        }
+        stage('Test Entregable 1') {
+            steps {
+                dir("Entregable1"){
+                    sh 'python3 tests.py'
+                }
+            }
+        }
+        stage('Test Entregable 3') {
+            steps {
+                dir("Entregable3"){
+                    sh 'python3 test.py'
                 }
             }
         }
